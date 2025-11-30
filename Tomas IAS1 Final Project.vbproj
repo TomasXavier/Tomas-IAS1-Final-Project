@@ -122,6 +122,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\EmployeeForm.Designer.vb">
+      <DependentUpon>EmployeeForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EmployeeForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Admin\UserManagementForm.Designer.vb">
       <DependentUpon>UserManagementForm.vb</DependentUpon>
     </Compile>
