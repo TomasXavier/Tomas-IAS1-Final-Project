@@ -27,10 +27,10 @@ Partial Class MainViewForm
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EmployeeManagementToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BackupRestoreToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AuditTrailingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.BackupRestoreToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.AuditTrailingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.btnLogout = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -72,11 +72,21 @@ Partial Class MainViewForm
         Me.EmployeeManagementToolStripMenuItem.Size = New System.Drawing.Size(302, 34)
         Me.EmployeeManagementToolStripMenuItem.Text = "Employee Management"
         '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(299, 6)
+        '
         'BackupRestoreToolStripMenuItem
         '
         Me.BackupRestoreToolStripMenuItem.Name = "BackupRestoreToolStripMenuItem"
         Me.BackupRestoreToolStripMenuItem.Size = New System.Drawing.Size(302, 34)
         Me.BackupRestoreToolStripMenuItem.Text = "Backup & Restore"
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(299, 6)
         '
         'AuditTrailingToolStripMenuItem
         '
@@ -84,21 +94,11 @@ Partial Class MainViewForm
         Me.AuditTrailingToolStripMenuItem.Size = New System.Drawing.Size(302, 34)
         Me.AuditTrailingToolStripMenuItem.Text = "Audit Trailing"
         '
-        'ToolStripSeparator1
-        '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(299, 6)
-        '
-        'ToolStripSeparator2
-        '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(299, 6)
-        '
         'btnLogout
         '
-        Me.btnLogout.Location = New System.Drawing.Point(1117, 5)
+        Me.btnLogout.Location = New System.Drawing.Point(1092, 5)
         Me.btnLogout.Name = "btnLogout"
-        Me.btnLogout.Size = New System.Drawing.Size(71, 47)
+        Me.btnLogout.Size = New System.Drawing.Size(96, 47)
         Me.btnLogout.TabIndex = 2
         Me.btnLogout.Text = "Logout"
         Me.btnLogout.UseVisualStyleBackColor = True

@@ -122,6 +122,8 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\Auditing.vb" />
+    <Compile Include="Admin\BastaSQL.vb" />
     <Compile Include="Admin\EmployeeForm.Designer.vb">
       <DependentUpon>EmployeeForm.vb</DependentUpon>
     </Compile>
@@ -174,8 +176,12 @@
     <Compile Include="User\UnauthorizedForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="User\UserCredentials.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Admin\EmployeeForm.resx">
+      <DependentUpon>EmployeeForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\UserManagementForm.resx">
       <DependentUpon>UserManagementForm.vb</DependentUpon>
     </EmbeddedResource>

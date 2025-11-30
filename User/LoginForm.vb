@@ -30,17 +30,24 @@ Public Class LoginForm
             Dim reader As MySqlDataReader = cmd.ExecuteReader()
 
             If reader.Read() Then
+                UserID = reader.GetInt32("id")
+                Username = txtUsername.Text
+                UserRole = reader.GetString("role")
+
                 Dim Status = reader.GetString("status")
 
                 If Status = "Authorized" Then
+                    Auditing.Log("Login successful", "Authorized account")
                     MessageBox.Show("Login successful. Your account is Authorized.", "Access Granted", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     Me.Hide()
                     MainViewForm.UpdateView(UserManagementForm, MainViewForm.windowPanel)
                     MainViewForm.Show()
 
                 ElseIf Status = "Pending" Then
+                    Auditing.Log("Login successful", "Pending account")
                     MessageBox.Show("Your account is Pending.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Else
+                    Auditing.Log("Login successful", "Unauthorized account")
                     MessageBox.Show("Login successful. Your account is Unauthorized.", "Access Granted", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     Me.Hide()
                     UnauthorizedForm.Show()
@@ -50,9 +57,11 @@ Public Class LoginForm
             Else
                 loginAttempts += 1
                 If loginAttempts >= maxtAttempts Then
+                    Auditing.Log(0, "", "unknown", "Exceeded Login attempts", "username = " & txtUsername.Text)
                     MessageBox.Show("Too many failed attempts. Please try again tomorrow.", "Access Locked", MessageBoxButtons.OK, MessageBoxIcon.Stop)
                     Application.Exit()
                 Else
+                    Auditing.Log(0, "", "unknown", "Failed Login attempt", "username = " & txtUsername.Text)
                     MessageBox.Show("Invalid username or password. Attempts left: " & (maxtAttempts - loginAttempts), "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 End If
             End If

@@ -11,6 +11,11 @@
 
 
     Private Sub btnLogout_Click(sender As Object, e As EventArgs) Handles btnLogout.Click
+        Logout()
+        Me.Close()
+    End Sub
 
+    Private Sub EmployeeManagementToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EmployeeManagementToolStripMenuItem.Click
+        UpdateView(EmployeeForm, windowPanel)
     End Sub
 End Class
