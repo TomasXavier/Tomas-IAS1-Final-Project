@@ -4,10 +4,8 @@ CREATE TABLE Employees (
     ID INT AUTO_INCREMENT PRIMARY KEY,
     FirstName VARCHAR(100) NOT NULL,
     LastName VARCHAR(100) NOT NULL,
-    Department VARCHAR(100) NOT NULL,
     ContactNumber VARCHAR(50),
-    Email VARCHAR(150),
-    Address VARCHAR(255)
+    Email VARCHAR(150)
 );
 
 CREATE TABLE AuditLogs (

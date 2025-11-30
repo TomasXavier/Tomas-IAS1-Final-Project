@@ -30,8 +30,6 @@ Partial Class EmployeeForm
         Me.txtEmail = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtContactNumber = New System.Windows.Forms.TextBox()
-        Me.cmbDepartment = New System.Windows.Forms.ComboBox()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.dgvEmployees = New System.Windows.Forms.DataGridView()
         Me.btnAdd = New System.Windows.Forms.Button()
         Me.btnUpdate = New System.Windows.Forms.Button()
@@ -112,26 +110,6 @@ Partial Class EmployeeForm
         Me.txtContactNumber.Size = New System.Drawing.Size(243, 39)
         Me.txtContactNumber.TabIndex = 1
         '
-        'cmbDepartment
-        '
-        Me.cmbDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmbDepartment.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.cmbDepartment.FormattingEnabled = True
-        Me.cmbDepartment.Location = New System.Drawing.Point(179, 229)
-        Me.cmbDepartment.Name = "cmbDepartment"
-        Me.cmbDepartment.Size = New System.Drawing.Size(243, 40)
-        Me.cmbDepartment.TabIndex = 2
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.Label5.Location = New System.Drawing.Point(26, 229)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(142, 32)
-        Me.Label5.TabIndex = 0
-        Me.Label5.Text = "Department"
-        '
         'dgvEmployees
         '
         Me.dgvEmployees.AllowUserToAddRows = False
@@ -197,10 +175,8 @@ Partial Class EmployeeForm
         Me.Controls.Add(Me.btnUpdate)
         Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.dgvEmployees)
-        Me.Controls.Add(Me.cmbDepartment)
         Me.Controls.Add(Me.txtContactNumber)
         Me.Controls.Add(Me.txtEmail)
-        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.txtLastName)
         Me.Controls.Add(Me.Label3)
@@ -223,8 +199,6 @@ Partial Class EmployeeForm
     Friend WithEvents txtEmail As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents txtContactNumber As TextBox
-    Friend WithEvents cmbDepartment As ComboBox
-    Friend WithEvents Label5 As Label
     Friend WithEvents dgvEmployees As DataGridView
     Friend WithEvents btnAdd As Button
     Friend WithEvents btnUpdate As Button
