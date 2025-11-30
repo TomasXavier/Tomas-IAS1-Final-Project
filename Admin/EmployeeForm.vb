@@ -211,4 +211,23 @@ Public Class EmployeeForm
             MessageBox.Show(ex.Message, "Employees Listing Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
+
+    Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+        Try
+            Using konekt As MySqlConnection = BastaSQL.Konekt()
+                konekt.Open()
+
+                Using cmd As New MySqlCommand("DELETE FROM Employees WHERE ID=@ID", konekt)
+                    cmd.ExecuteNonQuery()
+
+                    LogEmployeeDetails("Employee deleted succesfully")
+                    MessageBox.Show($"User was deleted successfully.", "User Deletion Successful", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    ListEmployeeDGV()
+                End Using
+            End Using
+        Catch ex As Exception
+            LogEmployeeDetails("Failed attempt at deleting new Employee")
+            MessageBox.Show(ex.Message, "Error Deleting User", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
 End Class
