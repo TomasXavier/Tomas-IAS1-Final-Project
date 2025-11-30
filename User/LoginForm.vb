@@ -35,7 +35,9 @@ Public Class LoginForm
                 If Status = "Authorized" Then
                     MessageBox.Show("Login successful. Your account is Authorized.", "Access Granted", MessageBoxButtons.OK, MessageBoxIcon.Information)
                     Me.Hide()
-                    AdminForm.Show()
+                    MainViewForm.UpdateView(UserManagementForm, MainViewForm.windowPanel)
+                    MainViewForm.Show()
+
                 ElseIf Status = "Pending" Then
                     MessageBox.Show("Your account is Pending.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Else

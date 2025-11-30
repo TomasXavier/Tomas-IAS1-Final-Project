@@ -37,9 +37,10 @@ Partial Class LoginForm
         '
         Me.Lcreate.AutoSize = True
         Me.Lcreate.ForeColor = System.Drawing.SystemColors.InfoText
-        Me.Lcreate.Location = New System.Drawing.Point(140, 200)
+        Me.Lcreate.Location = New System.Drawing.Point(210, 308)
+        Me.Lcreate.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Lcreate.Name = "Lcreate"
-        Me.Lcreate.Size = New System.Drawing.Size(84, 13)
+        Me.Lcreate.Size = New System.Drawing.Size(124, 20)
         Me.Lcreate.TabIndex = 17
         Me.Lcreate.Text = "Create Account."
         '
@@ -48,36 +49,41 @@ Partial Class LoginForm
         Me.btnExit.BackColor = System.Drawing.Color.Red
         Me.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnExit.ForeColor = System.Drawing.SystemColors.Control
-        Me.btnExit.Location = New System.Drawing.Point(187, 174)
+        Me.btnExit.Location = New System.Drawing.Point(280, 268)
+        Me.btnExit.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(71, 23)
+        Me.btnExit.Size = New System.Drawing.Size(106, 35)
         Me.btnExit.TabIndex = 16
         Me.btnExit.Text = "Exit"
         Me.btnExit.UseVisualStyleBackColor = False
         '
         'txtPassword
         '
-        Me.txtPassword.Location = New System.Drawing.Point(113, 120)
+        Me.txtPassword.Location = New System.Drawing.Point(170, 185)
+        Me.txtPassword.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.Size = New System.Drawing.Size(145, 20)
-        Me.txtPassword.TabIndex = 15
+        Me.txtPassword.Size = New System.Drawing.Size(216, 26)
+        Me.txtPassword.TabIndex = 1
+        Me.txtPassword.Text = "Admin.1234"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(52, 45)
+        Me.Label3.Location = New System.Drawing.Point(78, 69)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(48, 20)
+        Me.Label3.Size = New System.Drawing.Size(73, 29)
         Me.Label3.TabIndex = 14
         Me.Label3.Text = "Login"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(52, 124)
+        Me.Label2.Location = New System.Drawing.Point(78, 191)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(53, 13)
+        Me.Label2.Size = New System.Drawing.Size(78, 20)
         Me.Label2.TabIndex = 13
         Me.Label2.Text = "Password"
         '
@@ -86,44 +92,49 @@ Partial Class LoginForm
         Me.btnLogin.BackColor = System.Drawing.SystemColors.MenuHighlight
         Me.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnLogin.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnLogin.Location = New System.Drawing.Point(113, 174)
+        Me.btnLogin.Location = New System.Drawing.Point(170, 268)
+        Me.btnLogin.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(68, 23)
-        Me.btnLogin.TabIndex = 12
+        Me.btnLogin.Size = New System.Drawing.Size(102, 35)
+        Me.btnLogin.TabIndex = 2
         Me.btnLogin.Text = "Login"
         Me.btnLogin.UseVisualStyleBackColor = False
         '
         'chkShowPassword
         '
         Me.chkShowPassword.AutoSize = True
-        Me.chkShowPassword.Location = New System.Drawing.Point(113, 150)
+        Me.chkShowPassword.Location = New System.Drawing.Point(170, 231)
+        Me.chkShowPassword.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.chkShowPassword.Name = "chkShowPassword"
-        Me.chkShowPassword.Size = New System.Drawing.Size(102, 17)
+        Me.chkShowPassword.Size = New System.Drawing.Size(148, 24)
         Me.chkShowPassword.TabIndex = 11
         Me.chkShowPassword.Text = "Show Password"
         Me.chkShowPassword.UseVisualStyleBackColor = True
         '
         'txtUsername
         '
-        Me.txtUsername.Location = New System.Drawing.Point(113, 94)
+        Me.txtUsername.Location = New System.Drawing.Point(170, 145)
+        Me.txtUsername.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtUsername.Name = "txtUsername"
-        Me.txtUsername.Size = New System.Drawing.Size(145, 20)
-        Me.txtUsername.TabIndex = 10
+        Me.txtUsername.Size = New System.Drawing.Size(216, 26)
+        Me.txtUsername.TabIndex = 0
+        Me.txtUsername.Text = "admin"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(52, 98)
+        Me.Label1.Location = New System.Drawing.Point(78, 151)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(55, 13)
+        Me.Label1.Size = New System.Drawing.Size(83, 20)
         Me.Label1.TabIndex = 9
         Me.Label1.Text = "Username"
         '
         'LoginForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(311, 258)
+        Me.ClientSize = New System.Drawing.Size(466, 397)
         Me.Controls.Add(Me.Lcreate)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.txtPassword)
@@ -133,6 +144,7 @@ Partial Class LoginForm
         Me.Controls.Add(Me.chkShowPassword)
         Me.Controls.Add(Me.txtUsername)
         Me.Controls.Add(Me.Label1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "LoginForm"
         Me.Text = "LoginForm"
         Me.ResumeLayout(False)

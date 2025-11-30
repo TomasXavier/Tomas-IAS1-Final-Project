@@ -4,7 +4,7 @@ Imports Google.Protobuf.WellKnownTypes
 Imports MySql.Data.MySqlClient
 
 
-Public Class AdminForm
+Public Class UserManagementForm
     Dim conn As New MySqlConnection("server=localhost; userid=root; password=root; database=user_db")
     Private Sub btnRemove_Click(sender As Object, e As EventArgs) Handles btnRemove.Click
         Dim query As String = "DELETE FROM user_tbl WHERE id=@id"
@@ -56,7 +56,7 @@ Public Class AdminForm
             Dim adapter As New MySqlDataAdapter(query, conn)
             Dim table As New DataTable()
             adapter.Fill(table)
-            DGVUserAdmin.DataSource = table
+            dgvUsers.DataSource = table
         Catch ex As Exception
             MessageBox.Show("Error: " & ex.Message)
         Finally
@@ -71,7 +71,7 @@ Public Class AdminForm
             Dim adapter As New MySqlDataAdapter(query, conn)
             Dim table As New DataTable()
             adapter.Fill(table)
-            DGVUserAdmin.DataSource = table
+            dgvUsers.DataSource = table
         Catch ex As Exception
             MessageBox.Show("Error: " & ex.Message)
         Finally
@@ -79,21 +79,21 @@ Public Class AdminForm
         End Try
     End Sub
 
-    Private Sub dgvAdminUser_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGVUserAdmin.CellContentDoubleClick
+    Private Sub dgvAdminUser_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvUsers.CellContentDoubleClick
         If e.RowIndex >= 0 Then
-            Dim selectedRow As DataGridViewRow = DGVUserAdmin.Rows(e.RowIndex)
+            Dim selectedRow As DataGridViewRow = dgvUsers.Rows(e.RowIndex)
             txtID.Text = selectedRow.Cells("id").Value.ToString()
             cmbStatus.Text = selectedRow.Cells("status").Value.ToString()
             cmbRole.Text = selectedRow.Cells("role").Value.ToString()
         End If
     End Sub
 
-    Private Sub LogoutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LogoutToolStripMenuItem.Click
+    Private Sub LogoutToolStripMenuItem_Click(sender As Object, e As EventArgs) 
         Me.Close()
         LoginForm.Show()
     End Sub
 
-    Private Sub AddProfileToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddProfileToolStripMenuItem.Click
+    Private Sub AddProfileToolStripMenuItem_Click(sender As Object, e As EventArgs) 
         Me.Close()
         SignupForm.Show()
     End Sub
@@ -107,7 +107,7 @@ Public Class AdminForm
                     Dim adapter As New MySqlDataAdapter(query, conn)
                     Dim table As New DataTable()
                     adapter.Fill(table)
-                    DGVUserAdmin.DataSource = table
+                    dgvUsers.DataSource = table
                 End Using
             Catch ex As Exception
                 MsgBox(ex.Message)
@@ -115,9 +115,9 @@ Public Class AdminForm
         End If
     End Sub
 
-    Private Sub DGVUserAdmin_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DGVUserAdmin.CellContentClick
+    Private Sub DGVUserAdmin_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvUsers.CellContentClick
         If e.RowIndex >= 0 Then
-            Dim row As DataGridViewRow = DGVUserAdmin.Rows(e.RowIndex)
+            Dim row As DataGridViewRow = dgvUsers.Rows(e.RowIndex)
             txtID.Text = row.Cells("id").Value.ToString()
             txtusername.Text = row.Cells("username").Value.ToString()
             txtPassword.Text = row.Cells("password").Value.ToString()
