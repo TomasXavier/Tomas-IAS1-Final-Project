@@ -91,7 +91,7 @@ Partial Class UserManagementForm
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Button1.Location = New System.Drawing.Point(927, 260)
+        Me.Button1.Location = New System.Drawing.Point(941, 265)
         Me.Button1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(112, 35)
@@ -141,10 +141,10 @@ Partial Class UserManagementForm
         '
         'btnRemove
         '
-        Me.btnRemove.BackColor = System.Drawing.Color.Red
+        Me.btnRemove.BackColor = System.Drawing.Color.Brown
         Me.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnRemove.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnRemove.Location = New System.Drawing.Point(927, 306)
+        Me.btnRemove.Location = New System.Drawing.Point(635, 351)
         Me.btnRemove.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnRemove.Name = "btnRemove"
         Me.btnRemove.Size = New System.Drawing.Size(112, 35)
@@ -154,10 +154,10 @@ Partial Class UserManagementForm
         '
         'btnView
         '
-        Me.btnView.BackColor = System.Drawing.SystemColors.MenuHighlight
+        Me.btnView.BackColor = System.Drawing.SystemColors.InfoText
         Me.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnView.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnView.Location = New System.Drawing.Point(779, 304)
+        Me.btnView.Location = New System.Drawing.Point(320, 351)
         Me.btnView.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnView.Name = "btnView"
         Me.btnView.Size = New System.Drawing.Size(112, 35)
@@ -175,10 +175,10 @@ Partial Class UserManagementForm
         '
         'btnUpdate
         '
-        Me.btnUpdate.BackColor = System.Drawing.Color.Black
+        Me.btnUpdate.BackColor = System.Drawing.Color.Red
         Me.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnUpdate.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.btnUpdate.Location = New System.Drawing.Point(779, 260)
+        Me.btnUpdate.Location = New System.Drawing.Point(478, 351)
         Me.btnUpdate.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnUpdate.Name = "btnUpdate"
         Me.btnUpdate.Size = New System.Drawing.Size(112, 35)

@@ -15,29 +15,29 @@ Public Class SignupForm
         End Using
     End Function
     Private Sub Form4_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        lbl8minChar.ForeColor = Color.Red
-        lblNumber.ForeColor = Color.Red
-        lblSpecialchar.ForeColor = Color.Red
+        'lbl8minChar.ForeColor = Color.Red
+        'lblNumber.ForeColor = Color.Red
+        'lblSpecialchar.ForeColor = Color.Red
     End Sub
     Private Sub txtPassword_TextChanged(sender As Object, e As EventArgs) Handles txtPassword.TextChanged
         Dim password As String = txtPassword.Text
 
         If password.Length >= 8 Then
-            lbl8minChar.ForeColor = Color.Green
+            ' lbl8minChar.ForeColor = Color.Green
         Else
-            lbl8minChar.ForeColor = Color.Red
+            '  lbl8minChar.ForeColor = Color.Red
         End If
 
         If Regex.IsMatch(password, "\d") Then
-            lblNumber.ForeColor = Color.Green
+            ' lblNumber.ForeColor = Color.Green
         Else
-            lblNumber.ForeColor = Color.Red
+            ' lblNumber.ForeColor = Color.Red
         End If
 
         If Regex.IsMatch(password, "[\W_]") Then
-            lblSpecialchar.ForeColor = Color.Green
+            ' lblSpecialchar.ForeColor = Color.Green
         Else
-            lblSpecialchar.ForeColor = Color.Red
+            ' lblSpecialchar.ForeColor = Color.Red
         End If
     End Sub
 

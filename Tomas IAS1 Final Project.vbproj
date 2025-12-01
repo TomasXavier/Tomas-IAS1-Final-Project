@@ -122,7 +122,20 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\AuditForm.Designer.vb">
+      <DependentUpon>AuditForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AuditForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Admin\Auditing.vb" />
+    <Compile Include="Admin\BackUp.vb" />
+    <Compile Include="Admin\BackUpForm.Designer.vb">
+      <DependentUpon>BackUpForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\BackUpForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Admin\BastaSQL.vb" />
     <Compile Include="Admin\EmployeeForm.Designer.vb">
       <DependentUpon>EmployeeForm.vb</DependentUpon>
@@ -180,6 +193,12 @@
     <Compile Include="User\UserCredentials.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Admin\AuditForm.resx">
+      <DependentUpon>AuditForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\BackUpForm.resx">
+      <DependentUpon>BackUpForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\EmployeeForm.resx">
       <DependentUpon>EmployeeForm.vb</DependentUpon>
     </EmbeddedResource>

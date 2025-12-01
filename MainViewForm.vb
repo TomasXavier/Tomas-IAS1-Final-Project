@@ -35,10 +35,12 @@
     Private Sub BackupRestoreToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BackupRestoreToolStripMenuItem.Click
         MainViewForm.logoutTime.ResetTimer()
 
+        UpdateView(BackUpForm, windowPanel)
     End Sub
 
     Private Sub AuditTrailingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AuditTrailingToolStripMenuItem.Click
         MainViewForm.logoutTime.ResetTimer()
 
+        UpdateView(AuditForm, windowPanel)
     End Sub
 End Class
