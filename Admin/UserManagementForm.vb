@@ -7,6 +7,8 @@ Imports MySql.Data.MySqlClient
 Public Class UserManagementForm
     Dim conn As New MySqlConnection("server=localhost; userid=root; password=root; database=user_db")
     Private Sub btnRemove_Click(sender As Object, e As EventArgs) Handles btnRemove.Click
+        MainViewForm.logoutTime.ResetTimer()
+
         Dim query As String = "DELETE FROM user_tbl WHERE id=@id"
         Try
             conn.Open()
@@ -29,6 +31,8 @@ Public Class UserManagementForm
     End Sub
 
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
+        MainViewForm.logoutTime.ResetTimer()
+
         Dim query As String = "UPDATE user_tbl SET status=@status WHERE id=@id"
         Try
             conn.Open()
@@ -50,6 +54,8 @@ Public Class UserManagementForm
     End Sub
 
     Private Sub btnView_Click(sender As Object, e As EventArgs) Handles btnView.Click
+        MainViewForm.logoutTime.ResetTimer()
+
         Dim query As String = "SELECT id, username, password, status, role FROM user_tbl"
         Try
             conn.Open()
@@ -65,6 +71,8 @@ Public Class UserManagementForm
     End Sub
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        MainViewForm.logoutTime.AddActionTimerTracking(Me)
+
         Dim query As String = "SELECT id, username, password, status, role FROM user_tbl"
         Try
             conn.Open()
@@ -80,6 +88,8 @@ Public Class UserManagementForm
     End Sub
 
     Private Sub dgvAdminUser_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvUsers.CellContentDoubleClick
+        MainViewForm.logoutTime.ResetTimer()
+
         If e.RowIndex >= 0 Then
             Dim selectedRow As DataGridViewRow = dgvUsers.Rows(e.RowIndex)
             txtID.Text = selectedRow.Cells("id").Value.ToString()
@@ -98,6 +108,8 @@ Public Class UserManagementForm
         SignupForm.Show()
     End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        MainViewForm.logoutTime.ResetTimer()
+
         Dim query As String = $"Select id, username, password, role, Status FROM `user_db`.`user_tbl` WHERE id Like '{txtID.Text}'"
         If txtID.Text = "" Then
             MessageBox.Show("No input on search bar")
@@ -116,6 +128,8 @@ Public Class UserManagementForm
     End Sub
 
     Private Sub DGVUserAdmin_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvUsers.CellContentClick
+        MainViewForm.logoutTime.ResetTimer()
+
         If e.RowIndex >= 0 Then
             Dim row As DataGridViewRow = dgvUsers.Rows(e.RowIndex)
             txtID.Text = row.Cells("id").Value.ToString()

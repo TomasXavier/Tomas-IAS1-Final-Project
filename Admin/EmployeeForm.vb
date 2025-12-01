@@ -4,6 +4,7 @@ Imports MySql.Data.MySqlClient
 Public Class EmployeeForm
     Private employeeID As Integer
     Private Sub EmployeeForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        MainViewForm.logoutTime.AddActionTimerTracking(Me)
         ListEmployeeDGV()
     End Sub
 
@@ -110,6 +111,8 @@ Public Class EmployeeForm
     End Sub
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
+        MainViewForm.logoutTime.ResetTimer()
+
         If ValidateEmployeeForm() Then
             Try
                 Using konekt As MySqlConnection = BastaSQL.Konekt()
@@ -139,6 +142,8 @@ Public Class EmployeeForm
     End Sub
 
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
+        MainViewForm.logoutTime.ResetTimer()
+
         If ValidateEmployeeForm() Then
             Try
                 Using konekt As MySqlConnection = BastaSQL.Konekt()
@@ -213,6 +218,8 @@ Public Class EmployeeForm
     End Sub
 
     Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+        MainViewForm.logoutTime.ResetTimer()
+
         Try
             Using konekt As MySqlConnection = BastaSQL.Konekt()
                 konekt.Open()
@@ -229,5 +236,10 @@ Public Class EmployeeForm
             LogEmployeeDetails("Failed attempt at deleting new Employee")
             MessageBox.Show(ex.Message, "Error Deleting User", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
+    End Sub
+
+    Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
+        MainViewForm.logoutTime.ResetTimer()
+
     End Sub
 End Class

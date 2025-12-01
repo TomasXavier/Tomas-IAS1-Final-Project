@@ -32,6 +32,7 @@ Partial Class MainViewForm
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.AuditTrailingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.btnLogout = New System.Windows.Forms.Button()
+        Me.lblInActivityTimer = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -39,7 +40,7 @@ Partial Class MainViewForm
         '
         Me.windowPanel.Location = New System.Drawing.Point(12, 36)
         Me.windowPanel.Name = "windowPanel"
-        Me.windowPanel.Size = New System.Drawing.Size(1116, 571)
+        Me.windowPanel.Size = New System.Drawing.Size(1116, 549)
         Me.windowPanel.TabIndex = 0
         '
         'MenuStrip1
@@ -56,7 +57,7 @@ Partial Class MainViewForm
         'FileToolStripMenuItem
         '
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(54, 29)
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(54, 32)
         Me.FileToolStripMenuItem.Text = "File"
         '
         'SettingsToolStripMenuItem
@@ -103,11 +104,21 @@ Partial Class MainViewForm
         Me.btnLogout.Text = "Logout"
         Me.btnLogout.UseVisualStyleBackColor = True
         '
+        'lblInActivityTimer
+        '
+        Me.lblInActivityTimer.AutoSize = True
+        Me.lblInActivityTimer.Location = New System.Drawing.Point(521, 590)
+        Me.lblInActivityTimer.Name = "lblInActivityTimer"
+        Me.lblInActivityTimer.Size = New System.Drawing.Size(48, 20)
+        Me.lblInActivityTimer.TabIndex = 3
+        Me.lblInActivityTimer.Text = "Timer"
+        '
         'MainViewForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1201, 619)
+        Me.Controls.Add(Me.lblInActivityTimer)
         Me.Controls.Add(Me.btnLogout)
         Me.Controls.Add(Me.windowPanel)
         Me.Controls.Add(Me.MenuStrip1)
@@ -131,4 +142,5 @@ Partial Class MainViewForm
     Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
     Friend WithEvents AuditTrailingToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents btnLogout As Button
+    Friend WithEvents lblInActivityTimer As Label
 End Class
