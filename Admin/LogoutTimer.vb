@@ -2,7 +2,7 @@
 
     Public inactivityTimer As New Timer()
     'Public inactivityLimit As Integer = 5 * 60
-    Public maxTime As Integer = 60
+    Public maxTime As Integer = 5
     Public remainingTime As Integer = maxTime
     Public label As Label
 
